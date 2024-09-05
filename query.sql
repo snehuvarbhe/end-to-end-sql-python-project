@@ -69,7 +69,7 @@ select * from (
 )
 where rnk=1
 
-/* Which subcategory had highest growth by profit in 2023 as compatred to 2022*/
+/* Which subcategory had highest growth by profit in 2023 as compared to 2022*/
 with cte as (
 	select sub_category,extract(year from order_date) as dt,sum(profit) as sales from df_orders
 	group by sub_category,dt
